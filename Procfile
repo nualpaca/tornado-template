@@ -1,1 +1,2 @@
-web: python app.py
+web: bin/web
+worker: bin/worker

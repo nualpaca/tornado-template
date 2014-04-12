@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "$FLASK_ENV" == "production" ]; then
+    python -m app.__init__
+else
+	python manage.py runserver
+fi
