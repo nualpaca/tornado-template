@@ -1,5 +1,13 @@
 SQLAlchemy==0.9.4
+amqp==1.4.4
+anyjson==0.3.3
 backports.ssl-match-hostname==3.4.0.2
+billiard==3.3.0.16
+celery==3.1.10
+kombu==3.0.14
+pika==0.9.13
 psycopg2==2.5.2
+pytz==2014.2
 tornado==3.2
+tornado-celery==0.3.2
 wsgiref==0.1.2
