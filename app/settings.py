@@ -1,5 +1,6 @@
-from tornado.options import define, options
 import os
+
+# @TODO: learn about tornado options.define and potentially use that
 
 class Config(object):
     """Configuration object for celery""" 
@@ -15,9 +16,10 @@ class Config(object):
     CELERY_REDIRECT_STDOUTS = True
     CELERY_REDIRECT_STDOUTS_LEVEL = 'DEBUG'
     CELERY_TRACK_STARTED = True
-    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 'postgresql+psycopg2://postgres:postgres@localhost:5432/app_development')
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 
+        'postgresql+psycopg2://postgres:postgres@localhost:5432/app_development')
 
-    PORT = 5000
+    PORT = os.getenv('PORT',5000)
 
 class Development(Config):
     DEBUG=True
