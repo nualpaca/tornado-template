@@ -18,6 +18,7 @@ class Config(object):
     CELERY_TRACK_STARTED = True
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 
         'postgresql+psycopg2://postgres:postgres@localhost:5432/app_development')
+    SQLALCHEMY_ECHO = True
 
     PORT = os.getenv('PORT',5000)
 

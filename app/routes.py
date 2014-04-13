@@ -1,5 +1,7 @@
-from controllers.sample import SampleController
+from controllers.users import UserController
+from handlers.index import IndexHandler
 
 url_patterns = [
-    (r"/", SampleController),
+	(r"/", IndexHandler),
+    (r"/users", UserController),
 ]
